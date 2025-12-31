@@ -1,0 +1,14 @@
+# Compiled binaries
+proxy
+*.o
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+*.log.*
+
+# OS files
+.DS_Store
