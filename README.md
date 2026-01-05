@@ -2,6 +2,8 @@
 
 ## Custom HTTP/HTTPS Proxy Server (C++)
 
+**Video-Recording link** - https://drive.google.com/file/d/1PwWpocsb_ngd_QkXpCTevizuKfKWGwhD/view?usp=sharing
+
 ### Overview
 
 This project implements a **fully functional HTTP/HTTPS proxy server** in C++ from scratch. The proxy supports standard HTTP requests (via `curl -x`) and HTTPS traffic using the `CONNECT` method with secure bidirectional tunneling. It is designed to demonstrate low-level network programming, concurrency, caching, and system-level design concepts.
