@@ -121,8 +121,11 @@ void handle_client(int client_fd, string client_ip) {
 
     string cache_key = make_cache_key(req);
     string cached_response;
+    
+     
 
     if (req.method == "GET" && cache.get(cache_key, cached_response)) {
+        cout<<"ewde"<<endl;
         send(client_fd, cached_response.c_str(), cached_response.size(), 0);
         close(client_fd);
         log_access(client_ip,
@@ -133,11 +136,13 @@ void handle_client(int client_fd, string client_ip) {
         return;
     }
 
+
     int server_fd = connect_to_host(req.host, req.port);
     if (server_fd < 0) {
         close(client_fd);
         return;
     }
+    
 
     send(server_fd, request.c_str(), request.size(), 0);
 
@@ -165,9 +170,10 @@ void handle_client(int client_fd, string client_ip) {
 }
 
     
-    
+   
 
-    if (req.method == "GET" && status_code == 200) {
+    if (req.method == "GET" && status_code !=0) {
+
         cache.put(cache_key, full_response);
     }
 
